@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ahamed Site</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}"/>
+</head>
+
+<body>
+    <p>hello</p>
+    {{ hello }}
+
+    <div class="division">
+        {% if a_list %}
+
+        {% for item in a_list %}
+        <p>{{ item.name }}</p>
+        <p>{{ item.date }}</p>
+        <hr>
+        {% endfor %}
+        
+        {% else %}
+        <p>sorry! No data found!</p>
+        {% endif %}
+    </div>
+    <img src="{% static 'images/dog.jpg' %}" alt="A Picture">
+</body>
+
+</html>
